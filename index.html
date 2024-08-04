@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/672d97617c.js" crossorigin="anonymous"></script>
+</head>
+<body class="conteudo">
+    <header class="conteudo__cabecalho">
+        <a class="redirecionarinicio" href="./index.html">
+            <i class="fa-solid fa-house fa-3x" style="color: #0a3871;"></i>
+        </a>
+    </header>
+    <main class="conteudo__apresentacao">
+        <section class="conteudo__apresentacao__input">
+            <textarea name="textoDoUsuario" class="conteudo__apresentacao__input__texto" placeholder="Digite seu texto"></textarea>
+            <div class="conteudo__apresentacao__input__aviso">
+                <img class="conteudo__apresentacao__input__aviso__icone" src="./assets/Vector.png" alt="símbolo de aviso"> 
+                <p class="conteudo__apresentacao__input__aviso__texto">Apenas letras minúsculas e sem acento</p>
+            </div>
+            <div class="conteudo__apresentacao__input__buttons">
+                <button onclick="criptografarTexto()" class="conteudo__apresentacao__input__buttons__criptografar" id="botaoCriptografar">Criptografar</button>
+                <button onclick="descriptografarTexto()" class="conteudo__apresentacao__input__buttons__descriptografar" id="botaoDescriptografar">Descriptografar</button>
+            </div>
+        </section>
+        <section class="conteudo__apresentacao__output">
+            <div id="conteudo__apresentacao__output__vazio">
+                <img class="conteudo__apresentacao__output__vazio__imagem" src="./assets/boneco.png" alt="menina com lupa">
+                <h1 class="conteudo__apresentacao__output__vazio__titulo">Nenhuma mensagem encontrada</h1>
+                <p class="conteudo__apresentacao__output__vazio__texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div id="conteudo__apresentacao__output__resultado">
+                <p class="conteudo__apresentacao__output__resultado__texto" id="textoFinal"></p>
+                <button onclick="copiarTexto()" class="conteudo__apresentacao__output__resultado__copiar" id="botaoCopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
